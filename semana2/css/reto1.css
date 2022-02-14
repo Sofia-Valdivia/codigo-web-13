@@ -1,0 +1,77 @@
+* {
+margin:0;
+padding: 0;
+}
+
+body {
+font-family: "Outfit", sans-serif;
+}
+
+section {
+background-color: hsl(217, 54%, 11%);
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card {
+width: 290px;
+background-color: hsl(216, 50%, 16%);
+border-radius: 14px;
+}
+
+.card-photo {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.image-principal {
+border-radius: 14px;
+}
+
+.text-white {
+color: white;   
+font-weight: 400;
+}
+
+.contenedor-dos {
+margin-left: 20px;
+margin-right: 20px;
+}
+
+.text-gary {
+margin-top: 15px;
+color: white;
+opacity: 0.3;
+font-weight: 300;
+}
+
+.contenedor-detalle {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.text-eth {
+color: hsl(178, 100%, 50%);
+}
+
+.text-reloj {
+color: hsl(215, 51%, 70%);
+}
+
+.contenedor-autor {
+display: flex;
+align-items: center;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.autor {
+margin-left: 3px;
+}
