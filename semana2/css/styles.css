@@ -1,0 +1,145 @@
+
+body {
+font-family: Helvetica;
+}
+h1 {
+color: red;
+background-color: black;
+}
+
+h2 {
+color:green;
+background-color: aqua;
+}
+
+/*p {
+color:blue;
+background-color: yellow;
+} 
+*/
+
+a {
+ color: pink;   
+ background-color: yellowgreen;
+}
+
+#contenedor-uno {
+    background-color: #09a;
+}
+
+#contenedor-dos {
+    background-color: yellowgreen;
+}
+
+.contenedor-principal {
+    background-color: violet;
+    padding: 30px;
+}
+
+.btn-ingresar {
+    background-color: rgb(14, 139,255);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border:none;
+}
+
+/*Al usar clases se pueden compartir estilos*/
+/* Es decir reutilizamos el código.*/
+
+.btn-registro {
+font-size: 25px;
+background-color: red;
+}
+
+.contenedor-form {
+    border: 3px solid coral;
+    border-radius: 8px;
+}
+
+.contenedor-interno-form{
+padding: 20px;  
+text-align: center;
+/* el text align tiene 03 opciones
+left, center y right, justificará
+de forma horizontal*/  
+}
+
+.titulo-form {
+color: blue;
+background-color: aliceblue;
+}
+
+.input-form {
+padding: 10px;
+border-radius: 8px;
+border: 1px solid black;
+width: 400px;
+}
+
+
+.input-codigo {
+width:100px;
+}
+
+.input-numero {
+width: 275px;
+}
+
+.btn-crear-usuario {
+    background-color: rgb(255, 14, 223);
+    color: rgb(15, 14, 14);
+    padding: 8px;
+    border-radius: 6px;
+    border:none;
+}
+
+/*Pseudoclases.- Los elementos tienen propiedades
+internas:
+
+hover.- detecta cuando el mouse esta sobre el elemento, 
+los estilos se aplicarán solo si el mouse está sobre 
+dicho elemento.*/
+
+.btn-ingresar:hover {
+background-color: red;
+color:black;
+text-decoration: none;
+padding: 50px;
+}
+
+/* Los elementos como el <a>, tambien tiene pseudoclases
+como:
+link,
+visted,
+hover,
+active.
+
+Estas pseudoclases aplican para todos los elementos del html.*/
+
+div:hover{
+    background-color: red;
+}
+
+.contenedor-interno-form h1 {
+    border:2px solid #000;
+}
+
+/* First Child, busca el primer elemento
+Ej:Tengo 03 h1
+h1
+h1
+h1
+ahora quiero cambier el color pero solo del primer h1*/
+
+h1:first-child {
+    color: pink;
+}
+
+input:first-of-type  {
+    color:red;
+}
+
+
+
+
