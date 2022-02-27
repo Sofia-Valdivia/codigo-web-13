@@ -7,6 +7,16 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+
+.imagen-perfil{
+border-radius: 45px;
+border: solid hsl(217, 19%, 35%);
+display: flex;
+align-items: center;
+
+}
+
+
 .titulo-perfil{
 font-size: 25px;
 margin-top: 20px;
@@ -24,13 +34,6 @@ color: hsl(0, 0%, 81%);
 
       } 
 
-.imagen-perfil{
-border-radius: 45px;
-border: solid hsl(217, 19%, 35%);
-display: flex;
-align-items: center;
-
-}
 .nombre{
   display: flex;
   align-items: flex-start;
