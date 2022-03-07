@@ -16,7 +16,6 @@ const pokemonContainer=document.querySelector("#row-pokemons");
 const pokemonName=document.querySelector("#pokemon-name");
 const pokemonImage=document.querySelector("#pokemon-img");
 const pokemonAbility=document.querySelector("#pokemon-ability");
-const pokemonLocation=document.querySelector("#pokemon-location");
 
 const obtenerPokemones= async()=>{  
 const response=await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
@@ -75,7 +74,7 @@ const obtenerDetallePokemon=async (url)=> {
   pokemonName.innerHTML=data.name;
   pokemonImage.src = data.sprites.other.dream_world.front_default;
   pokemonAbility.innerHTML=data.abilities[0].ability.name;
-  pokemonLocation.innerHTML=data.name.location_area_encounters;
+  
 }
 
 obtenerPokemones();
