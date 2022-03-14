@@ -1,0 +1,21 @@
+.card-custom-body {
+    height: 45vh !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-color: black;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+}
+.link {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
