@@ -3,9 +3,10 @@
 function imprimir() {
 console.log("Hola mundo desde una function");
   };
-  // La idea es tener una funcion que reciba un parametro el cual me indique si es + - * /
-  // Em base a ese parametro llama a la funcion que necesite del archivo operaciones y retorno
-  // resultado
+  // La idea es tener una función que reciba un parámetro
+  // el cual me indique si es:  +  -  *  /
+  // En base a ese parámetro  se llama a la función que 
+  // necesite del archivo operaciones.
   
   function calculadorHTML(operacion) {
 
@@ -13,8 +14,8 @@ console.log("Hola mundo desde una function");
     const numero1 = document.querySelector("#numero1").value;
     const numero2 = document.querySelector("#numero2").value;
 
-    // validamos que los datos  estén vacios para poder operar y uso return,
-    //para detener la validación:  
+    // validamos que los datos  estén vacios para poder operar
+    // y uso return, para detener la validación:  
     if (numero1 === "" || numero2 === "") {
       alert("Debe completar los campos");
       return;
@@ -41,11 +42,14 @@ console.log("Hola mundo desde una function");
     }
   
     // para acabar debo mostrar el resultado en mi html:
-
     const p = document.createElement("p");
+
     const value = document.createTextNode(resultado);
+
     p.appendChild(value);
+
     const contenedor = document.querySelector("#resultado");
+
     contenedor.appendChild(p);
-  }
+  };
   
