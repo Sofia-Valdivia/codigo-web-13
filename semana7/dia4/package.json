@@ -1,0 +1,18 @@
+{
+  "name": "dia4",
+  "version": "1.0.0",
+  "description": "mi primer proyecto con NODE",
+  "main": "prueba.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sofia Valdivia",
+  "license": "ISC",
+  "dependencies": {
+    "data-format": "^2.0.0",
+    "date-format": "^4.0.4",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}

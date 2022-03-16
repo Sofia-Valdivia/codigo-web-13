@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fecf6a;
+}
+
+h1 {
+  color: red;
+  padding: 10px;
+}
+
+.success {
+  background-color: greenyellow;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.info {
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.warning {
+  background-color: pink;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.danger {
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.div-icon-phone {
+  background: url("./imagenes/iphone.jpeg");
+  border: solid 2px pink;
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.div-icon-mail {
+  background: url("./imagenes/gmail.jpeg");
+  border: solid 2px rgba(143, 226, 65, 0.959);
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.div-icon-search {
+  background: url("./imagenes/lupa.png");
+  border: solid 2px #09cab0;
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.div-icon-laptop {
+  background: url("./imagenes/laptop.png");
+  border: solid 2px pink;
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container-1 {
+  background-color: #030941;
+  height: 100px;
+}
+
+.container-2 {
+  background-color: #060a42;
+  height: 200px;
+}
+
+.container-3 {
+  background-color: #090b43;
+  height: 300px;
+}
+
+.container-4 {
+  background-color: #0c0c44;
+  height: 400px;
+}
+
+.container-5 {
+  background-color: #0f0d45;
+  height: 500px;
+}
+
+.container-6 {
+  background-color: #120e46;
+  height: 600px;
+}
+
+.container-7 {
+  background-color: #150f47;
+  height: 700px;
+}
+
+.container-8 {
+  background-color: #181048;
+  height: 800px;
+}
+
+.container-9 {
+  background-color: #1b1149;
+  height: 900px;
+}
+
+.container-10 {
+  background-color: #1e124a;
+  height: 1000px;
+}
+/*# sourceMappingURL=estilos.css.map */

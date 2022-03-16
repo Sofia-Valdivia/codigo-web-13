@@ -1,0 +1,18 @@
+//Variables en SASS
+// En SAASS podemos usar variables para guardar colores primarios, secundarios, extras
+//medidas que sean repetitivas
+// fuentes-tipos de letras
+//logica que puede mostrar o no objetos
+//! la forma de crear variable es
+//!el nombre de las variable este separado por guiones
+
+$color-principal:#fecf6a;
+
+
+$color-red:#f01;
+
+$padding-1:10px;
+
+
+//Esta variable que acabamos de crear podemos usarla en cuanquier parte de nuestro archivo
+//Consejo, es recomendable tener un archivo que contenga

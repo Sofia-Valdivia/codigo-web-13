@@ -1,0 +1,90 @@
+//Una vex que importamosel archivo, ya se habilita para usar variables, bucles etc
+
+@import"./variables.scss";
+
+
+
+
+body {
+    margin: 0;
+    padding: $padding-1;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:$color-principal;
+}
+
+h1 {
+    color: red;
+    padding: $padding-1;
+}
+
+//*Mixins en SASS
+//*Son un tipo de funcion la cual nos premite almacenar un codigo y poder reutilizarlo
+//* Además podemos pasarle variables
+
+
+@mixin alert($bg:greenyellow){ 
+
+    background-color:$bg;
+    padding: $padding-1;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+ .success {
+     @include alert;
+ }
+
+ .info {
+     @include alert ($bg: aqua);
+ }
+ .warning {
+     @include alert ($bg: pink);
+ }
+
+ .danger {
+     @include alert ($bg: red);
+ }
+
+//Asi como los mixin retornan una porcion de codigo tambien pueden retornar una clase directo
+
+
+@mixin generate-icons($name, $icon,$color,$size:1800px){
+
+   .div-icon-#{$name} {  
+       background:url("./imagenes/#{$icon}");
+       border:solid 2px $color;
+       width: $size;
+       height: $size;
+       background-size:cover;
+       background-repeat: no-repeat;
+   }
+}
+
+@include generate-icons("phone","iphone.jpeg", pink,400px);
+@include generate-icons("mail","gmail.jpeg", rgba(143, 226, 65, 0.959),200px);
+@include generate-icons("search","lupa.png", rgb(9, 202, 176),400px);
+@include generate-icons("laptop","laptop.png", pink,400px);
+
+//Bucle usando SAASS
+@for $i from 1 through 10 {
+//Crear 5 containers para elemntos distintos
+
+.container-#{$i}{
+background-color:rgb(
+    $i*12/4,
+    $i+100/12, 
+    $i+32*2);
+
+height: 200px*$i/2;
+
+}
+}
+
+
+
+
+
+
+
+
