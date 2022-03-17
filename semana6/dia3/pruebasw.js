@@ -1,50 +1,50 @@
-const containerElements=document.querySelector("#container-elements"); 
- //Vamos a combianr los objetos del as dos url para tarbajar
+const containerElements = document.querySelector("#container-elements");
+//Vamos a combianr los objetos del as dos url para tarbajar
 
-const URL_STAR_WARS="https://swapi.dev/api/people";
-const URL_SW_IMAGES="https://akabab.github.io/starwars-api/api/all.json";
+const URL_STAR_WARS = "https://swapi.dev/api/people";
+const URL_SW_IMAGES = "https://akabab.github.io/starwars-api/api/all.json";
 
-const getDataFromStarWars=async()=>{
-    const response=await fetch(URL_STAR_WARS);
-    const data =await response.json();
+const getDataFromStarWars = async () => {
+    const response = await fetch(URL_STAR_WARS);
+    const data = await response.json();
     //console.log(data.results);
-   await getImageFromStarWars(data.results);
-   await setStarWarsInView(data.results);
+    await getImageFromStarWars(data.results);
+    await setStarWarsInView(data.results);
 };
-const getImageFromStarWars=async(actors)=>{
-const response=await fetch(URL_SW_IMAGES);
-const imagenes=await response.json(); 
+const getImageFromStarWars = async (actors) => {
+    const response = await fetch(URL_SW_IMAGES);
+    const imagenes = await response.json();
 
-actors.map(async(actor)=>{
+    actors.map(async (actor) => {
         //la idea es que por cada iteracion se pueda extraer la foto del API de URL_SW_IMAGES
-        
-const resultado=imagenes.filter((imagen)=>imagen.name===actor.name);
- actor.imageFromAPI=resultado[0].image;
-});       
-console.log(actors);
 
-};    
+        const resultado = imagenes.filter((imagen) => imagen.name === actor.name);
+        actor.imageFromAPI = resultado[0].image;
+    });
+    console.log(actors);
 
-const showDetail=async(actors)=>{
+};
 
-    const response=await fetch (actors);
-    const people=await response.json();
-    console.log("people",people);
-    
-    
+const showDetail = async (actors) => {
+
+    const response = await fetch(actors);
+    const people = await response.json();
+    console.log("people", people);
+
+
     //JSON.stringify, debe ir en mayúscula en esta combinación.
     localStorage.setItem("people", JSON.stringify(people));
-    
-    const url=" http://127.0.0.1:5500/semana6/dia3/starwarsdetalle.html";
-    window.location.href= url;
-    
-    };
-const setStarWarsInView=(actor)=>{
-        actor.map((actor)=>{
 
-        const html= ` 
+    const url = " http://127.0.0.1:5500/semana6/dia3/starwarsdetalle.html";
+    window.location.href = url;
+
+};
+const setStarWarsInView = (actor) => {
+    actor.map((actor) => {
+
+        const html = ` 
         <div class="col-md-3 mb-5">
-        <div class="card link" onclick="showDetail('${actor}')">
+        <div class="card link" onclick="showDetail('${actor.url}')">
             
             <div class="card-body card-custom-body"
             style=
@@ -72,12 +72,12 @@ const setStarWarsInView=(actor)=>{
 
 `;
 
-containerElements.innerHTML +=html;
+        containerElements.innerHTML += html;
     });
 };
 
 
-   
+
 
 
 //por revision//
