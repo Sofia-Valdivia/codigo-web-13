@@ -17,4 +17,3 @@ namePeople.innerHTML=objetoPeople.name;
 birthYearPeople.innerHTML=objetoPeople.birth_year;
 imgDetail.src=objetoPeople.image;
 
-//Por revision//

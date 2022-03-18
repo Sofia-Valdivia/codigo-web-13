@@ -1,5 +1,5 @@
 const containerElements = document.querySelector("#container-elements");
-//Vamos a combianr los objetos del as dos url para tarbajar
+//Vamos a combianr los objetos de las dos url para trabajar
 
 const URL_STAR_WARS = "https://swapi.dev/api/people";
 const URL_SW_IMAGES = "https://akabab.github.io/starwars-api/api/all.json";
@@ -25,11 +25,12 @@ const getImageFromStarWars = async (actors) => {
 
 };
 
-const showDetail = async (actors) => {
+const showDetail = async (actors,foto) => {
 
     const response = await fetch(actors);
     const people = await response.json();
     console.log("people", people);
+    people.image=foto;
 
 
     //JSON.stringify, debe ir en mayúscula en esta combinación.
@@ -43,8 +44,9 @@ const setStarWarsInView = (actor) => {
     actor.map((actor) => {
 
         const html = ` 
+        
         <div class="col-md-3 mb-5">
-        <div class="card link" onclick="showDetail('${actor.url}')">
+        <div class="card link" onclick="showDetail('${actor.url}','${actor.imageFromAPI}')">
             
             <div class="card-body card-custom-body"
             style=
@@ -53,9 +55,10 @@ const setStarWarsInView = (actor) => {
             rgba(0,0,0,0.3),
             rgba(0,0,0,0.3)
             ),
-            url(${actor.imageFromAPI});">  
-            
+              
+            url(${actor.imageFromAPI});">
             <span class="badge bg-success">${actor.gender}</span>
+            
                 <h4 class="text-white mt-2">${actor.name}</h4>
                 <div class="d-flex justify-content-between w-100 text-white">
                   <div>
@@ -75,12 +78,6 @@ const setStarWarsInView = (actor) => {
         containerElements.innerHTML += html;
     });
 };
-
-
-
-
-
-//por revision//
 
 
 getDataFromStarWars();
